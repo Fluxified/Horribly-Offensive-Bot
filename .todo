@@ -1,0 +1,20 @@
+Functional Changes:
+  - Add logging for bot commands. Output to a file or possibly a database.
+  - Change "Deleted" to "Hidden/Inactive" to accurately represent the status.
+  - Setup Repo for the Bot
+  - Setup Pipeline for the Bot
+  - Make a way to un-register commands from the discord list ("Delete Commands")
+
+Command Updates:
+  -
+
+New Commands:
+  - Ballance
+  - Blackjack
+  - Roulette
+  - Pay
+  - BalTop
+  - Broke
+  - Lottery
+  - Battle
+  - Slots
