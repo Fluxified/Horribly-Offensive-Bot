@@ -8,7 +8,7 @@ Functional Changes:
 Command Updates:
   -
 
-New Commands:
+Gambling Commands:
   - Ballance
   - Blackjack
   - Roulette
@@ -18,3 +18,23 @@ New Commands:
   - Lottery
   - Battle
   - Slots
+
+OW Account Library:
+- Library # This should show a list of accounts which are registered and their current ranks.
+  /library -> Returns a list of registered accounts (AccountID, Status, RankTank, RankDamage, RankSupport, RankOpen, Owner)
+  # Accounts are added directly to the database by Flux :)
+  # AccountID is the Battle Tag of the account
+  # Status is if the account is checked out or not
+  # Rank x3
+  # Rank for OpenQueue
+  # Owner so the person checking out the account can contact the owner if the account needs authentication
+- Checkout # This should allow a user to check out an account and mark the account as in-use or active (Default return time is 5hrs).
+  /checkout {accountID} -> Returns the login info for the specified account if the user has permission
+  # Should prompt the user in a ghost message so only they can see it.
+  # Should also provide information for returning the bot and how much time they have.
+  # Should only allow one account to be checked out at a time.
+  # Should promot the user if they run out of time. If they are still using the account then they should /checkout again
+- Return # This should allow a user to return an account early.
+  /return -> Prompts the user with the account has been returned and that they can check out another account if they want
+  # Should know the user and which account was returned.
+  # If the user uses the command and doesn't have a bot checked out then return nothing was returned.
